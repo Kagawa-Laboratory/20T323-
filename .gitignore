@@ -1,0 +1,27 @@
+# .texファイル、latexmkrc、risepaper.clsがあればコンパイルできるので
+# 生成物はignoreする
+.DS_Store
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ind
+*.lof
+*.lot
+*.out
+*.toc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.ilg
+*.fls
+*.log
+*.fdb_latexmk
+*.snm
+*.nav
+*.dvi
+*.synctex.gz

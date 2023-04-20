@@ -1,0 +1,78 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+
+    // ---------- Language ----------
+
+    "[tex]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+    },
+
+    "[latex]": {
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+    },
+
+    "[bibtex]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+    },
+
+
+    // ---------- LaTeX Workshop ----------
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ilg",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.nav",
+        "*.dvi",
+        // "*.log",             // エラー用
+        // "*.synctex.gz"       // PDFとtexを同期させるため
+    ],
+    "latex-workshop.latex.outDir": "out",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-silent",
+                //"-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+        },
+    ],
+
+
+}
+

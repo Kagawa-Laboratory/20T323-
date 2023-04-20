@@ -1,0 +1,65 @@
+\chapter{追加部分}
+\section{卒論・修論についての注意事項}
+卒論・修論についての注意事項は、次のリンクも確認しておいてください。\\
+\url{https://guppy.eng.kagawa-u.ac.jp/Seminar/Reference/sotsuron.html}
+\section{latexの導入}
+TEX Wiki等を参考にTex(Tex Liveがおすすめ)をインストールしてください。\\
+\url{https://texwiki.texjp.org/?TeX%E5%85%A5%E6%89%8B%E6%B3%95}\\
+VSCodeの拡張機能であるLaTeX Workshopもインストールしてください。
+
+TEXは容量も大きく、インストールに時間がかかります。
+ローカル環境にTEXをインストールしたくない場合は、香川研究室のhelaにTEXがインストールされています。vscodeのremote sshなどを使って執筆することができます。
+\subsection{latexでのエラー}
+エラーは/out/main.logに出力されます。
+\subsection{latex Workshopの使い方}
+VSCode左側のリストからTEXのタブに移動して操作することができます。以下はよく使うショートカットキーです。
+\begin{itemize}
+  \item 右側にプレビューを表示 Ctrl+Alt+V
+  \item TexからPDFの該当箇所を開く Ctrl+Alt+J
+  \item PDFからTEXの該当箇所を開く Ctrl+左クリック
+\end{itemize}
+\subsection{VSCodeの設定}
+設定でformat on save , auto save をオンにしています。不要な場合は消してください。また、build時に不要な生成ファイルを削除するように設定しています。
+
+
+\section{参考文献について}
+参考文献はpbibtexを用います(大学配布のテンプレート同様に書いても問題ありません)。bib/references.bibに書くと、自動的に引用された文献のみが出力されます。エントリ種別やデータ項目はBibTeXのwikipedia\cite{BibTeXWi33:online}を参考にしてください。\\
+\url{https://ja.wikipedia.org/wiki/BibTeX}\\
+参考文献におけるいろいろ
+\begin{itemize}
+  \item 引用する際は、サイトごとに配布されるものを用いると便利です。例えば、google scholor\cite{GoogleSc43:online}だと引用→bibtexにあります。
+  \item webからの引用ではgoogle chromeの拡張機能のBibTeX entry from URLを用いると自動で生成してくれます。
+  \item 論文管理ツールを使っていると、bibtex形式で出力してくれます。
+\end{itemize}
+
+\section{研究活動に役立つツール}
+\begin{itemize}
+  \item 論文検索ツール : google scholor
+  \item その他論文検索ツール郡 : semantic scholor や elicitなど人工知能を用いた論文検索
+  \item CONNECTED PAPERS : 論文同士の関連を図として表示
+  \item diagrams.net : フローチャートなどの作成
+  \item DeepL : 翻訳ツール
+  \item ChatGPT : 対話型の人工知能
+\end{itemize}
+
+\section{サンプル}
+\subsection{画像}
+画像ファイル\ref{figure:sample}です。
+\begin{figure}
+  \centering
+  \includegraphics[width=120mm,height=90mm]{./assets/images/sample.png}
+  \caption{サンプル画像}
+  \label{figure:sample}
+\end{figure}
+
+\subsection{ソースコード}
+コード\ref{sample1}はソースファイルを参照したもの,コード\ref{sample2}はtexファイル内に直接コードを書いたものです。書式設定はmain.texの\textbackslash lstsetで設定しています。自由に書き換えてください。
+コード内で日本語を使用する場合はjlistinsを導入して、\textbackslash usepackage\{listings\} から \textbackslash usepackage\{listings,jlistings\}に変更してください。
+
+\lstinputlisting[language=c,caption=sample1.c,label=sample1]{./assets/src/sample.c}
+
+\begin{lstlisting}[language=c,caption=sample2.c,label=sample2]
+  for(i = 0; i < 10; i++){
+    //do somethings.
+  }
+\end{lstlisting}

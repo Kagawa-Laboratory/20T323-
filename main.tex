@@ -1,0 +1,68 @@
+\documentclass{risepaper}
+% \卒論
+\修論
+\usepackage{makeidx}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{subfiles}
+\usepackage{url}
+
+% コード(listings)の書式
+\lstset{
+    basicstyle=\ttfamily\scriptsize,
+    numbers=left,
+		numberstyle={\scriptsize},
+		stepnumber=1,
+		frame={tblr},
+		framesep = 5pt,
+		breaklines=true,
+		tabsize = 4,
+}
+
+	\title {卒業論文及び修士論文を書くにあたって}
+	\author{情報 太郎}
+	\year{令和元年度~(2019年度)}
+	\teacher{香川 次郎}
+	\chief{香川 次郎}
+	\seconda{高松 花子}
+	\secondb{電子 正夫}
+	\date{令和2年2月8日}
+% \date{\today}
+
+\makeindex
+
+\etitle{This is the English Title.}
+% 2006/2/7改訂
+% タイトルを複数行にしたいときは、下のetitleenv環境を使ってください。
+%\begin{etitleenv}
+%This is
+%the very very very very very very very very very very very very long long long English Title.
+%\end{etitleenv}
+
+% 概要
+\input{chapters/abstract}
+
+\begin{document}
+% 目次
+\maketitle
+%  \listoffigures % 図の目次
+%  \listoftables  % 表の目次
+
+% 本文
+\subfile{chapters/chapter1}
+\subfile{chapters/chapter2}
+\subfile{chapters/chapter3}
+
+% 謝辞
+\subfile{chapters/acknowledgment}
+% 参考文献
+\bibliographystyle{jplain} %アルファベット順 (junsrtは引用順)
+\bibliography{./bib/references}
+% 付録
+\subfile{chapters/appendix}
+% 索引
+\insertindex
+\printindex
+
+\end{document}
